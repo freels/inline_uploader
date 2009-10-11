@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
      "VERSION",
      "examples/uploader/public/ajaxfileupload.js",
      "examples/uploader/uploader.rb",
+     "inline_uploader.gemspec",
      "lib/inline_uploader.rb",
      "test/inline_uploader_test.rb",
      "test/test_helper.rb"
