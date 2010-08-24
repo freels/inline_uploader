@@ -9,7 +9,7 @@ begin
     gem.description = %Q{Provides an upload endpoint for ajax uploads and easy attachement of ajax uploads as POST params for normal requests.}
     gem.email = "matt@freels.name"
     gem.homepage = "http://github.com/freels/inline_uploader"
-    gem.authors = ["Matt Freels"]
+    gem.authors = ["Matt Freels", "Herval Freire"]
     #gem.add_development_dependency "thoughtbot-shoulda"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
