@@ -80,9 +80,15 @@ class InlineUploader
       params.inject({}) do |fds, kv|
         key, val = kv
 
+        # if node is a hash, proces each key to spot replaceable strings
         if val.is_a? Hash
           fds.merge! attach_fds(params[key])
 
+        # if node is an rray, proces each element of the array recursively
+        elsif val.is_a? Array
+          params[key].each { |v| fds.merge! attach_fds(v) }
+
+        # node is a string - could it be an inline upload?
         elsif tag = get_valid_tag(val)
           upload = File.join(@delegate.upload_dir, tag)
 
